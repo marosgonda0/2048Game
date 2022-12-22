@@ -1,8 +1,8 @@
 public enum Smer {
-    HORE(0, -1),
-    DOLE(0, 1),
-    VLAVO(-1, 0),
-    VPRAVO(1, 0);
+    HORE(-1, 0),
+    DOLE(1, 0),
+    VLAVO(0, -1),
+    VPRAVO(0, 1);
 
     private int x;
     private int y;

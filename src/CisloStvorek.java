@@ -21,7 +21,12 @@ public class CisloStvorek {
     public void zmenStav(Policka polickoStav) {
         this.polickoStav = polickoStav;
         this.stvorec.zmenFarbu(polickoStav.getFarba());
-        this.text.changeText(polickoStav.getCislo());
+        if(polickoStav.equals(Policka.CISLO16)) {
+            this.text.posunVodorovne(-18);
+            this.text.changeText(polickoStav.getCislo());
+        } else {
+            this.text.changeText(polickoStav.getCislo());
+        }
         this.text.zmenFarbu(polickoStav.getFarbaText());
         this.stvorec.zobraz();
         this.text.zobraz();
